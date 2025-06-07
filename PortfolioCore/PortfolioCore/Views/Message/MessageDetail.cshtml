@@ -1,0 +1,31 @@
+﻿@model PortfolioCore.Entities.Message
+
+@{
+    ViewData["Title"] = "MessageDetail";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<input type="hidden" asp-for="MessageId" />
+
+<table class="table table-bordered">
+    <tr>
+        <th>Gönderen</th>
+        <td>@Model.NameSurname</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <th>Konu</th>
+        <td>@Model.Subject</td>
+    </tr>
+    <tr>
+        <th>Mesaj</th>
+        <td>@Model.MessageDetail</td>
+    </tr>
+    <tr>
+        <th>Tarih</th>
+        <td>@Model.SendDate</td>
+    </tr>
+</table>

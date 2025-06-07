@@ -1,0 +1,29 @@
+﻿@model List<Connect>
+@{
+    ViewData["Title"] = "ConnectList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2> İletişim</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th> Ad Soyad </th>
+        <th>Email</th>
+        <th>Telefon</th>
+        <th>Adres</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.ConnectId</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Email</td>
+            <td>@item.Phone</td>
+            <td>@item.MapUrl</td>
+        </tr>
+    }
+</table>
+
+

@@ -1,0 +1,17 @@
+﻿@model List<PortfolioCore.Entities.MyJob>
+<section id="hero" class="hero section dark-background">
+
+      <img src="/iPortfolio-1.0.0/assets/img/back.jpg" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Ayşenur Kalkan</h2>
+       
+            <p>İşlerim: <span class="typed" data-typed-items="@string.Join(",",Model.Select(x=>x.JobName))"></span>  
+            <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+           </p>
+        
+        
+
+      </div>
+
+    </section>

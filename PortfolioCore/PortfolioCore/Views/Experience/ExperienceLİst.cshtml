@@ -1,0 +1,30 @@
+﻿@model List<Experience>
+@{
+    ViewData["Title"] = "ExperienceLİst";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2> Deneyimlerim</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Şirket Adı </th>
+        <th>Unvan</th>
+        <th>Tarih</th>
+        <th>Açıklama</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.ExperienceId</td>
+            <td>@item.CompanyName</td>
+            <td>@item.Title</td>
+            <td>@item.ExperienceDate</td>
+            <td>@item.Description</td>
+        </tr>
+    }
+</table>
+
+
+ 
